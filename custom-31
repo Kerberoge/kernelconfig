@@ -1,0 +1,39 @@
+What didn't work in custom-31:
+- sound (including microphone input)
+
+
+Config for custom-31:
+
+Bus options (PCI etc.) --->
+    [ ] Support mmconfig PCI config space access
+Networking support --->
+    [ ] Generic failover module
+Device Drivers --->
+        Firmware Drivers --->
+	        EFI (Extensible Firmware Interface) Support --->
+	            [ ] Adjust memory attributes in EFISTUB
+        I2C support --->
+            [ ] ACPI I2C Operation region support
+	    [ ] Autoselect pertinent helper modules
+	    [ ]   SMBus-specific protocols
+	        I2C Hardware Bus support --->
+	            [ ] Intel 82801 (ICH/PCH)
+        Sound card support --->
+	        Advanced Linux Sound Architecture --->
+	                HD-Audio --->
+	                    [_] Build Realtek HD-audio codec support
+			    [|] Build Analog Devices HD-audio codec support
+			    [_] Build HDMI/DisplayPort HD-audio codec support
+			    [*] Enable generic HD-audio codec parser
+        HID bus support --->
+            [ ] /dev/hidraw raw HID device support
+	        USB HID support --->
+	            [ ] /dev/hiddev raw HID device support
+	        I2C HID support --->
+	            [x] HID over I2C transport layer ACPI driver
+    [*] X86 Platform Specific Device Drivers --->
+            [*] WMI
+	    [*] Dell X86 Platform Specific Device Drivers --->
+	            [*] Dell WMI notifications
+	    [x] Intel HID Event
+    [ ] Primary to Sideband (P2SB) bridge access support
